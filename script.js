@@ -45,7 +45,7 @@ const infoHtml = document.getElementById("info");
 
 const botonPrevio = document.querySelector(".previo-btn");
 const botonProximo = document.querySelector(".proximo-btn");
-const botonSorprendeme = document.querySelector("aleatorio-btn");
+const botonSorprendeme = document.querySelector(".aleatorio-btn");
 
 // indice selecionado en el array
 let indiceActual = 0;
@@ -87,6 +87,15 @@ botonProximo.addEventListener('click', () => {
     console.log(indiceActual)
 });
 mostrarEmpleado(indiceActual);
+
+// boton sorprendeme
+
+botonSorprendeme.addEventListener('click', () => {
+    indiceActual = Math.floor(Math.random() * empleados.length)
+    console.log(indiceActual);
+    console.log(empleados[indiceActual]);
+    mostrarEmpleado(indiceActual);
+})
 
 
 
